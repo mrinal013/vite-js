@@ -10,7 +10,7 @@
     <v-container>
       
       <v-main>
-        <p>Hello chat app</p>
+        <Chat />
       </v-main>
       
       <v-footer bottom app>
@@ -23,12 +23,14 @@
 </template>
 
 <script>
+import Chat from "./components/Chat.vue"
 import Form from "./components/Form.vue"
 
 export default {
   name: 'App',
 
   components: {
+    Chat,
     Form
   },
 
