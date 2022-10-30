@@ -22,20 +22,7 @@
   </v-app>
 </template>
 
-<script>
+<script setup>
 import Chat from "./components/Chat.vue"
 import Form from "./components/Form.vue"
-
-export default {
-  name: 'App',
-
-  components: {
-    Chat,
-    Form
-  },
-
-  data: () => ({
-    //
-  }),
-}
 </script>

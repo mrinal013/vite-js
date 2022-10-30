@@ -1,24 +1,26 @@
 <template>
     <v-container>
-        <v-form class="w-100">
+        <v-form class="w-100" @submit.prevent="sendMessage">
             <v-text-field 
-            color="primary" 
-            label="Hello" 
+            color="primary"  
             variant="outlined" 
             hide-details 
+            append-icon="mdi-send" 
+            @click:append="sendMessage" 
+            v-model="message"
             >
-
-            <template v-slot:append>        
-                <v-icon color="primary"> mdi-send</v-icon> 
-            </template>
-                
             </v-text-field>
         </v-form>
     </v-container>
 </template>
 
-<script>
-export default {
-    name: "Form"
+<script setup>
+import { ref } from 'vue';
+
+const message = ref('');
+
+const sendMessage = () => {
+    console.log(message.value)
 }
+
 </script>
